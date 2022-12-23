@@ -1,0 +1,26 @@
+{
+  "name": "sasthosebok.com",
+  "version": "1.0.1",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-community/netinfo": "9.3.5",
+    "expo": "^47.0.8",
+    "expo-status-bar": "~1.4.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-dropdownalert": "^4.5.1",
+    "react-native-internet-connection-alert": "^0.1.9",
+    "react-native-webview": "11.23.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
