@@ -1,6 +1,6 @@
 import React from "react";
 import { WebView } from "react-native-webview";
-import { BackHandler, Alert } from "react-native";
+import { BackHandler, Alert, Button } from "react-native";
 import InternetConnectionAlert from "react-native-internet-connection-alert";
 export default class App extends React.Component {
   constructor(props) {
@@ -31,6 +31,8 @@ export default class App extends React.Component {
     const WebApp = () => {
       return (
         <WebView
+          refreshing={true}
+          onRefresh={() => console.log("onRefresh")}
           javaScriptEnabled={true}
           domStorageEnabled={true}
           cacheEnabled={true}
@@ -43,7 +45,12 @@ export default class App extends React.Component {
             Alert.alert(
               "Your are Offline!",
               "Please check your network connection",
-              [{ text: "Ok", onPress: () => console.log("Your are Offline ") }]
+              [
+                {
+                  text: "Ok",
+                  onPress: () => console.log("Ok"),
+                },
+              ]
             );
           }}
         />
@@ -51,7 +58,7 @@ export default class App extends React.Component {
     };
 
     return (
-      <InternetConnectionAlert onChange={(connectionState) => {}}>
+      <InternetConnectionAlert onChange={(connectionState) => this.WEBVIEW_REF.current.reload()}>
         <WebApp />
       </InternetConnectionAlert>
     );
