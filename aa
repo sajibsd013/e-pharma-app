@@ -38,7 +38,7 @@ export default class App extends React.Component {
           setBuiltInZoomControls={false}
           source={{ uri: "https://sasthosebok.com/" }}
           ref={this.WEBVIEW_REF}
-          // onNavigationStateChange={this.onNavigationStateChange.bind(this)}
+          onNavigationStateChange={this.onNavigationStateChange.bind(this)}
           onError={(event) => {
             Alert.alert(
               "Your are Offline!",
