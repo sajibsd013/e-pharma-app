@@ -1,66 +1,14 @@
 import React from "react";
-import { WebView } from "react-native-webview";
-import { BackHandler, Alert, Button } from "react-native";
-import InternetConnectionAlert from "react-native-internet-connection-alert";
+import AppV1 from "./AppV1";
+import AppV3 from "./AppV3";
+
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.WEBVIEW_REF = React.createRef();
-  }
-
-  componentDidMount() {
-    BackHandler.addEventListener("hardwareBackPress", this.handleBackButton);
-  }
-
-  componentWillUnmount() {
-    BackHandler.removeEventListener("hardwareBackPress", this.handleBackButton);
-  }
-
-  handleBackButton = () => {
-    this.WEBVIEW_REF.current.goBack();
-    return true;
-  };
-
-  onNavigationStateChange(navState) {
-    this.setState({
-      canGoBack: navState.canGoBack,
-    });
-  }
-
   render() {
-    const WebApp = () => {
-      return (
-        <WebView
-          refreshing={true}
-          onRefresh={() => console.log("onRefresh")}
-          javaScriptEnabled={true}
-          domStorageEnabled={true}
-          cacheEnabled={true}
-          thirdPartyCookiesEnabled={true}
-          setBuiltInZoomControls={false}
-          source={{ uri: "https://sasthosebok.com/" }}
-          ref={this.WEBVIEW_REF}
-          // onNavigationStateChange={this.onNavigationStateChange.bind(this)}
-          onError={(event) => {
-            Alert.alert(
-              "Your are Offline!",
-              "Please check your network connection",
-              [
-                {
-                  text: "Ok",
-                  onPress: () => console.log("Ok"),
-                },
-              ]
-            );
-          }}
-        />
-      );
-    };
-
     return (
-      <InternetConnectionAlert onChange={(connectionState) => this.WEBVIEW_REF.current.reload()}>
-        <WebApp />
-      </InternetConnectionAlert>
+      <>
+        {/* <AppV1 /> */}
+        <AppV3 />
+      </>
     );
   }
 }
