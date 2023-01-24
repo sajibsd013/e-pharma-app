@@ -2,7 +2,7 @@
   "expo": {
     "name": "sasthosebok.com",
     "slug": "sasthosebok",
-    "version": "2.1.4",
+    "version": "2.1.5",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -26,7 +26,8 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.sajibsd013.app",
-      "versionCode": 6
+      "versionCode": 7,
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687603141766",
+    "project_id": "sasthosebok-21312",
+    "storage_bucket": "sasthosebok-21312.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687603141766:android:c3e552b616c3822debd507",
+        "android_client_info": {
+          "package_name": "com.sajibsd013.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687603141766-la758gbkf7trfhrasl8i4bklni2hmeav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0tn1K4DqlltVXv1R9e_7KGnyaW5wYWh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687603141766-la758gbkf7trfhrasl8i4bklni2hmeav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
