@@ -2,7 +2,7 @@
   "expo": {
     "name": "sasthosebok.com",
     "slug": "sasthosebok",
-    "version": "1.0.2",
+    "version": "3.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -13,24 +13,32 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png"      },
-      "package": "com.sajibsd013.app"
+        "foregroundImage": "./assets/adaptive-icon.png"
+      },
+      "package": "com.sajibsd013.app",
+      "versionCode": 101
+
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#C2185B",
+      "translucent": false
     },
     "extra": {
       "eas": {
         "projectId": "46de7eeb-4a89-428e-8794-08cbed425015"
       }
     }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-3545205458668722~1672532179"
   }
 }
