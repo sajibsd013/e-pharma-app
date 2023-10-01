@@ -13,7 +13,6 @@ import {
   AppOpenAd,
 } from "react-native-google-mobile-ads";
 
-import InterstitialAdsScreen from "./Ads/InterstitialAdsScreen";
 
 const adUnitIdInterstitial = __DEV__
   ? TestIds.INTERSTITIAL
@@ -104,7 +103,6 @@ export default class App extends Component {
       }
     );
 
-    // Start loading the interstitial straight away
 
     this.unsubscribeLoaded = this.rewarded.addAdEventListener(
       RewardedAdEventType.LOADED,
@@ -118,15 +116,6 @@ export default class App extends Component {
         console.log("User earned reward of ", reward);
       }
     );
-
-    // Start loading the rewarded ad straight away
-    // Preload an app open ad
-    
-
-    // Show the app open ad when user brings the app to the foreground.
-    // if(this.appOpenAd.load()){
-    //   this.appOpenAd.show();
-    // }
 
     
     this.rewarded.load();
@@ -159,18 +148,10 @@ export default class App extends Component {
           <RefreshControl
             enabled={this.state.enablePTR}
             refreshing={false}
-            onRefresh={() => this.webView.ref.reload()} // exl in function : this.yourWebview.reload();
+            onRefresh={() => this.webView.ref.reload()} 
           />
         }
       >
-        <BannerAd
-          unitId={adUnitIdBanner}
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          requestOptions={{
-            requestNonPersonalizedAdsOnly: true,
-          }}
-        />
-        {/* <InterstitialAdsScreen /> */}
         <WebView
           onScroll={(e) => {
             console.log(e.nativeEvent.contentOffset.y);
